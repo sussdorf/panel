@@ -1,9 +1,11 @@
 <?php
+
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 class VserverController extends Controller
 {
     /**
@@ -18,11 +20,13 @@ class VserverController extends Controller
 
         return view('vserver.overview', ['vserver' => $vserver]);
     }
-    public function view( $id)
+
+    public function view($id)
     {
         return view('vserver.view');
     }
-    public function stats( $uid)
+
+    public function stats($uid)
     {
         return view('vserver.stats');
     }

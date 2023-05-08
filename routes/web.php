@@ -1,10 +1,12 @@
 <?php
+
 header('Access-Control-Allow-Origin: https://panel.dnic.cloud');
+use App\Http\Controllers\AjaxController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\MonitoringController;
 use App\Http\Controllers\VserverController;
-use App\Http\Controllers\AjaxController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,4 +38,4 @@ Route::middleware('auth')->group(function () {
     Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('vserver.view');
 });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';
